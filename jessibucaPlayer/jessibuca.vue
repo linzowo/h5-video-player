@@ -93,10 +93,12 @@ export default {
     }
   },
   watch: {
-    videoUrl(newData, oldData) {
-      this.play(newData)
-    },
-    immediate: true
+    videoUrl: {
+      handler(newData, oldData) {
+        this.play(newData)
+      },
+      immediate: true
+    }
   },
   mounted() {
     window.onerror = (msg) => {
@@ -189,7 +191,7 @@ export default {
         // console.log("audioInfo", msg);
       })
 
-      this.jessibuca.on('videoInfo', function(msg) {
+      this.jessibuca.on('videoInfo', function (msg) {
         this.videoInfo = msg
         // console.log("videoInfo", msg);
       })
@@ -320,7 +322,7 @@ export default {
 }
 
 .iconfont {
-  font-family: "iconfont" !important;
+  font-family: 'iconfont' !important;
   font-size: 16px;
   font-style: normal;
   -webkit-font-smoothing: antialiased;
@@ -328,39 +330,39 @@ export default {
 }
 
 .icon-play:before {
-  content: "\e603";
+  content: '\e603';
 }
 
 .icon-pause:before {
-  content: "\e6c6";
+  content: '\e6c6';
 }
 
 .icon-stop:before {
-  content: "\e6a8";
+  content: '\e6a8';
 }
 
 .icon-audio-high:before {
-  content: "\e793";
+  content: '\e793';
 }
 
 .icon-audio-mute:before {
-  content: "\e792";
+  content: '\e792';
 }
 
 .icon-shuaxin11:before {
-  content: "\e720";
+  content: '\e720';
 }
 
 .icon-weibiaoti10:before {
-  content: "\e78f";
+  content: '\e78f';
 }
 
 .icon-weibiaoti11:before {
-  content: "\e790";
+  content: '\e790';
 }
 
 .icon-camera1196054easyiconnet:before {
-  content: "\e791";
+  content: '\e791';
 }
 
 .buttons-box {
