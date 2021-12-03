@@ -96,8 +96,8 @@ export default {
     videoUrl: {
       handler(newData, oldData) {
         this.play(newData)
-      },
-      immediate: true
+      }
+      // immediate: true
     }
   },
   mounted() {
